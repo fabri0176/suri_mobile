@@ -124,7 +124,7 @@
                     <div class="ui-grid-b ui-responsive">					
                         <div class="ui-block">
                             <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                                <label for="select-choice-a" class="select ui-select">Seleccionar ROL</label>
+                                <label for="rol" class="select ui-select">Seleccionar ROL</label>
                                 <div class="ui-select">									
                                     <select name="rol" id="rol" data-native-menu="true" tabindex="0"  onchange="utils.updateRedenderCartelera(this);">
                                         <option>Seleccione...</option>					
@@ -182,7 +182,7 @@
                                             <h5>Profesión: </h5><h4 id="profesion_perfil">Productor en Multimedia</h4>	
                                         </div>
                                         <div class="ui-block-b">
-                                            <h5>Email: </h5><h4 id="email1_perfil">Jonathan962_@misena.edu.co</h4>	
+                                            <h5>E-mail: </h5><h4 id="email1_perfil">Jonathan962_@misena.edu.co</h4>	
                                         </div>
                                         <div class="ui-block-c">
                                             <h5>Teléfono: </h5><h4 id="telefono_perfil">4885770</h4>
@@ -216,6 +216,96 @@
         <!--INICIO EDITAR PERFIL-->
         <div data-role="page" id="editar-perfil"  data-theme="a">
 
+            <div class="ui-panel-wrapper">
+                <div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+                    <a href="#menu-suri" class="ui-btn ui-icon-grid ui-btn-icon-left ui-corner-all ui-shadow">MENU</a>
+                    <h1 class="ui-title" role="heading" aria-level="1">SURI</h1>    
+                    <a href="#usuario-suri" class="ui-btn ui-icon-gear ui-btn-icon-right ui-corner-all ui-shadow">!</a>   
+                </div>
+
+                <div data-role="content">
+                    <div role="main" data-role="ui-content">
+
+                        <div class="ui-grid-solo ui-responsive">
+                            <div class="ui-block">
+                                <h2>EDITAR PERFIL</h2>
+                            </div>
+                        </div>
+
+                        <div class="ui-grid-solo ui-responsive">
+                            <div class="ui-block">
+                                <div class="ui-body ui-body-a ui-corner-all">
+                                    <form action="" method="POST" onsubmit="return false;">
+                                        <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                                            <label for="">MI FOTO:</label> 
+                                            <input type="file" name="" id="">
+                                        </div>
+                                        <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                                            <label for="">Nombre:</label>
+                                            <input type="text" name="" id="" placeholder="Escriba sus Nombres" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                        </div>
+                                        <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                                            <label for="">Apellidos:</label>
+                                            <input type="text" name="" id="" placeholder="Escriba sus Apellidos" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                        </div>
+                                        <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                                            <label for="">Fecha Nacimiento:</label>
+                                            <input type="date" name"" id="" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                        </div>
+                                        <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                                            <label for="">Profesión:</label>
+                                            <input type="text" name="" id="" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                        </div>
+                                        <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                                            <label for="name">E-mail:</label>
+                                            <input  type="email" name="" id="" placeholder="Escriba su E-mail" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                        </div>
+                                        <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                                            <label for="">Teléfono Fijo:</label>
+                                            <input type="text" name="" id="" placeholder="Escriba su número Telefónico" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                        </div>                                               
+                                        <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                                            <label for="">Movil:</label>
+                                            <input type="text" name="" id="" placeholder="Escriba su número Movil" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                        </div> 
+                                        <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                                            <label for="">Dirección Residencial:</label>
+                                            <input type="text" name="" id="" placeholder="Escriba su dirección Residencial" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                        </div> 
+                                        <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                                            <label for="ciudad_residencia" class="select ui-select">Ciudad de Residencia</label>
+                                            <div class="ui-select">                                 
+                                                <select name="ciudad_residencia" id="ciudad_residencia" data-native-menu="false" tabindex="0">
+                                                    <option value="">Seleccione...</option>
+                                                    <option value="">Armenia</option>                                                      
+                                                    <option value="">Bogota</option> 
+                                                    <option value="">Cali</option>                  
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="ui-body">
+                                            <fieldset class="ui-grid-a">
+                                                <div class="ui-block-a ui-fullsize ui-btn-block">                                               
+                                                    <button data-icon="star" data-form="ui-btn-up-a" class=" ui-btn ui-btn-a ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">Cancelar</button>
+                                                </div>
+                                                <div class="ui-block-b ui-fullsize ui-btn-block">
+                                                    <button data-icon="check" type="submit" class=" ui-btn ui-btn-c ui-icon-check ui-btn-icon-left ui-shadow ui-corner-all" aria-disabled="false" >GUARDAR</button>                                        
+                                                </div>
+                                            </fieldset>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>                    
+                        
+                    </div>      
+                </div>
+            </div>
+
+            <div data-position="fixed" data-role="footer" class="ui-footer" data-theme="a">
+                <h4>2015 © SURI. Todos los derechos reservados.| Hecho en Colombia | Privacy Policy | Terms of Service</h4>
+            </div>
         </div>
         <!--FIN EDITAR PERFIL-->
         <!--INICIO CAMBIAR CONTRASENA-->
@@ -232,9 +322,9 @@
         <script type="text/javascript" src="js/index.js"></script>
 
         <script type="text/javascript">
-                                        $(function () {
-                                            $("body>[data-role='panel']").panel();
-                                        });
+            $(function () {
+                $("body>[data-role='panel']").panel();               
+            });
         </script>
     </body>
 </html>
