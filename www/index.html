@@ -12,13 +12,13 @@
         <!--INICIO PANEL NAVEGADOR-->
         <div data-role="panel" id="menu-suri" data-display="reveal" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-body-inherit ui-panel-animate ui-panel-closed"> 
             <div class="ui-panel-inner">
-                <a href="#inicio" data-transition="fade" class="ui-btn ui-btn-a ui-icon-home ui-shadow" title="inicio">INICIO</a>
+                <a href="javascript:void(0)" onclick="change_pages.inicio();" data-transition="fade" class="ui-btn ui-btn-a ui-icon-home ui-shadow" title="inicio">INICIO</a>
             </div>           
         </div>  
 
         <div data-role="panel" id="usuario-suri" data-display="reveal" data-position="right" class="ui-panel ui-panel-position-right ui-panel-display-reveal ui-body-inherit ui-panel-animate ui-panel-closed"> 
             <div class="ui-panel-inner">             
-                <a href="#perfil" data-transition="fade" class="ui-btn ui-btn-c ui-icon-user  ui-shadow">PERFIL</a> 
+                <a href="javascript:void(0)" onclick="change_pages.perfil();" data-transition="fade" class="ui-btn ui-btn-c ui-icon-user  ui-shadow">PERFIL</a> 
                 <a href="#login" data-transition="pop" class="ui-btn ui-btn-c ui-icon-user  ui-shadow" onclick="login.cerrarSesion(this);">Cerrar Sesión</a>              
             </div>           
         </div>
@@ -200,7 +200,7 @@
                                 </div>
                             </div>
                             <div class="ui-block">
-                                <a class="ui-btn" href="#editar-perfil">EDITAR</a>
+                                <a class="ui-btn" href="javascript:void(0)" onclick="change_pages.editarPerfil();">EDITAR</a>
                             </div>
                         </div>
                     </div>    	
@@ -237,40 +237,40 @@
                                 <div class="ui-body ui-body-a ui-corner-all">
                                     <form action="" method="POST" onsubmit="return false;">
                                         <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                                            <label for="">MI FOTO:</label> 
-                                            <input type="file" name="" id="">
+                                            <label for="p_foto_edit">MI FOTO:</label> 
+                                            <input type="file" name="" id="p_foto_edit" name="p_foto_edit">
                                         </div>
                                         <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                                            <label for="">Nombre:</label>
-                                            <input type="text" name="" id="" placeholder="Escriba sus Nombres" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                            <label for="p_nombre">Nombre:</label>
+                                            <input type="text" name="p_nombre" id="p_nombre" placeholder="Escriba sus Nombres" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
                                         </div>
                                         <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                                            <label for="">Apellidos:</label>
-                                            <input type="text" name="" id="" placeholder="Escriba sus Apellidos" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                            <label for="p_apellidos">Apellidos:</label>
+                                            <input type="text" name="p_apellidos" id="p_apellidos" placeholder="Escriba sus Apellidos" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
                                         </div>
                                         <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                                            <label for="">Fecha Nacimiento:</label>
-                                            <input type="date" name"" id="" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                            <label for="p_fecha_nacimiento">Fecha Nacimiento:</label>
+                                            <input type="date" name="p_fecha_nacimiento" id="p_fecha_nacimiento" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
                                         </div>
                                         <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                                            <label for="">Profesión:</label>
-                                            <input type="text" name="" id="" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                            <label for="p_profesion">Profesión:</label>
+                                            <input type="text" name="p_profesion" id="p_profesion" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
                                         </div>
                                         <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                                            <label for="name">E-mail:</label>
-                                            <input  type="email" name="" id="" placeholder="Escriba su E-mail" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                            <label for="p_email">E-mail:</label>
+                                            <input  type="email" name="p_email" id="p_email" placeholder="Escriba su E-mail" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
                                         </div>
                                         <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                                            <label for="">Teléfono Fijo:</label>
-                                            <input type="text" name="" id="" placeholder="Escriba su número Telefónico" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                            <label for="p_tel_fijo">Teléfono Fijo:</label>
+                                            <input type="text" name="p_tel_fijo" id="p_tel_fijo" placeholder="Escriba su número Telefónico" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
                                         </div>                                               
                                         <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                                            <label for="">Movil:</label>
-                                            <input type="text" name="" id="" placeholder="Escriba su número Movil" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                            <label for="p_tel_movil">Movil:</label>
+                                            <input type="text" name="p_tel_movil" id="p_tel_movil" placeholder="Escriba su número Movil" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
                                         </div> 
                                         <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                                            <label for="">Dirección Residencial:</label>
-                                            <input type="text" name="" id="" placeholder="Escriba su dirección Residencial" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                            <label for="p_dir_residencia">Dirección Residencial:</label>
+                                            <input type="text" name="p_dir_residencia" id="p_dir_residencia" placeholder="Escriba su dirección Residencial" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
                                         </div> 
                                         <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
                                             <label for="ciudad_residencia" class="select ui-select">Ciudad de Residencia</label>
@@ -298,7 +298,7 @@
                                 </div>
                             </div>
                         </div>                    
-                        
+
                     </div>      
                 </div>
             </div>
@@ -315,16 +315,17 @@
         <!--FIN CAMBIAR CONTRASENA-->
 
         <script type="text/javascript" src="cordova.js"></script>
-        <script   type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-        <script  type="text/javascript"  src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript"  src="js/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="js/utils.js"></script>
         <script type="text/javascript" src="js/login.js"></script>
+        <script type="text/javascript" src="js/change_pages.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
 
         <script type="text/javascript">
-            $(function () {
-                $("body>[data-role='panel']").panel();               
-            });
+                                        $(function () {
+                                            $("body>[data-role='panel']").panel();
+                                        });
         </script>
     </body>
 </html>

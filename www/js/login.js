@@ -34,13 +34,12 @@ var login = {
                     $("#apellidos_perfil").text(dataUser.data_user['primer_apellido'] + ' ' + dataUser.data_user['segundo_apellido']);
                     $("#email1_perfil").text(dataUser.data_user['email']);
                     $("#profesion_perfil").text(dataUser.data_user['profesion']);
-
-                    $("#profesion_perfil").text(dataUser.data_user['profesion']);
+                    
                     $("#fecha_nacimiento_perfil").text(dataUser.data_user['fecha_nacimiento']);
                     $("#telefono_perfil").text(dataUser.data_user['telefono_fjo']);
                     $("#movil_perfil").text(dataUser.data_user['movil']);
                     $("#direccion_perfil").text(dataUser.data_user['direccion']);
-                    $("#imagen_perfil").attr('src', dataUser.base_url + dataUser.data_user['url_corta']);
+                    $("#imagen_perfil").attr('src', login.base_url + dataUser.data_user['url_corta']);
                     
                     //Renderizamos selectorl rol 
                     utils.renderSelectRol(dataUser.datos_rol);
@@ -49,7 +48,7 @@ var login = {
                     utils.renderCarteleraVirtual(dataUser.carteleraVirtual);
 
                     //Redireccionamos a perfil
-                    $.mobile.changePage("#inicio", {transition: "slideup", changeHash: false});
+                    change_pages.inicio();
                 } else {
 
                 }

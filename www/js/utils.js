@@ -125,6 +125,7 @@ var utils = {
         dataUser.datos_rol['nombre_bloque'] = bloque;
         dataUser.datos_rol['numero_apto'] = numero_apto;
         dataUser.datos_rol['nombre_conjunto'] = nombre_conjunto;
-    }
+    },
+    
 };
 
