@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SURI</title>
+        <link rel="stylesheet" href="css/suri-theme.min.css">
+        <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.css">
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.css">
+    </head>
+    <body>
+        <!--INICIO PANEL NAVEGADOR-->
+        <div data-role="panel" id="menu-suri" data-display="reveal" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-body-inherit ui-panel-animate ui-panel-closed"> 
+            <div class="ui-panel-inner">
+                <a href="#inicio" data-transition="fade" class="ui-btn ui-btn-a ui-icon-home ui-shadow" title="inicio">INICIO</a>
+            </div>           
+        </div>  
+
+        <div data-role="panel" id="usuario-suri" data-display="reveal" data-position="right" class="ui-panel ui-panel-position-right ui-panel-display-reveal ui-body-inherit ui-panel-animate ui-panel-closed"> 
+            <div class="ui-panel-inner">             
+                <a href="#perfil" data-transition="fade" class="ui-btn ui-btn-c ui-icon-user  ui-shadow">PERFIL</a> 
+                <a href="#login" data-transition="pop" class="ui-btn ui-btn-c ui-icon-user  ui-shadow" onclick="login.cerrarSesion(this);">Cerrar Sesión</a>              
+            </div>           
+        </div>
+        <!-- FIN PANEL NAVEGADOR-->
+
+        <div id="login" data-role="page" data-theme="a">
+            <div class="ui-header"  data-theme="a" data-role="header" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><h1 class="ui-title" tabindex="0" role="heading" aria-level="1">SURI</h1></li>					
+                    </ul>
+                    <!--<a data-transition="slidedown" data-icon="home" href="#perfil" class="ui-btn-right ui-btn-corner-all ui-btn" title="perfil"></a>-->				
+                </div>
+            </div>
+
+            <div data-role="content">
+                <!-- /Form Login -->
+                <div role="main" class="ui-content">
+                    <div class="ui-grid-solo ui-responsive">
+                        <div class="ui-block">
+                            <h2>PORTERÍA VIRTUAL</h2>
+                        </div>
+                        <div class="ui-block">
+                            <div class="ui-body ui-body-a ui-corner-all">
+                                <form action="" method="POST" onsubmit="return false;">
+                                    <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                                        <label for="name">CÓDIGO DE USUARIO:</label>
+                                        <input type="text" name="user_name" id="user_name" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                    </div>
+                                    <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                                        <label for="password">CONTRASEÑA:</label>
+                                        <input type="password" name="password" id="password" value="" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                    </div>
+                                    <div class="ui-body">
+                                        <fieldset class="ui-grid-a">
+                                            <div class="ui-block-a ui-fullsize ui-btn-block">												
+                                                <button data-icon="star" data-form="ui-btn-up-a" class=" ui-btn ui-btn-a ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">¡Registrarse!</button>
+                                            </div>
+                                            <div class="ui-block-b ui-fullsize ui-btn-block">
+                                                <button data-icon="check" type="submit" class=" ui-btn ui-btn-c ui-icon-check ui-btn-icon-left ui-shadow ui-corner-all" aria-disabled="false" onclick="login.sendLogin();">Ingresar</button>										
+                                            </div>
+                                        </fieldset>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>					
+                    </div>
+                </div>
+                <!-- /Form Login -->
+            </div>
+            <div data-theme="a" data-position="fixed" data-role="footer">
+                <h4>2015 © SURI. Todos los derechos reservados.| Hecho en Colombia | Privacy Policy | Terms of Service</h4>
+            </div>
+        </div>
+        <!--PAGINA INICIO-->
+        <div id="inicio" data-role="page" data-theme="c">
+
+            <div class="ui-panel-wrapper">
+                <div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+                    <a href="#menu-suri" class="ui-btn ui-icon-grid ui-btn-icon-left ui-corner-all ui-shadow">MENU</a>
+                    <h1 class="ui-title" role="heading" aria-level="1">SURI</h1>	
+                    <a href="#usuario-suri" class="ui-btn ui-icon-gear ui-btn-icon-right ui-corner-all ui-shadow">!</a>	  
+                </div>
+                <div role="main" class="ui-content">
+                    <div class="ui-grid-solo ui-responsive">
+                        <div class="ui-block">
+                            <h3 id="nombre_usuario">Hola Jonathan Gallego Londoño!</h3>
+                        </div>
+                    </div>
+                    <div class="ui-grid-solo ui-responsive">
+                        <div class="ui-block">
+                            <h2>¡De su Interés!</h2>
+                        </div>
+                        <div class="ui-block">
+                            <div class="ui-grid-b ui-responsive" id="carleteraVirtualData">
+                                <div class="ui-block-a">
+                                    <div data-role="collapsible">
+                                        <h1>FIESTA HALLOWEEN</h1>
+                                        <p>Lorem ipsum dolor sit amet, co libero maiores officii.</p>
+                                        <a href="http://www.redsuri.com/">Más...</a>
+                                    </div> 
+                                </div> 
+                                <div class="ui-block-b">
+                                    <div data-role="collapsible">
+                                        <h1>Reunion Consejo</h1>
+                                        <p>Lorem ipsum dolor sit amet fuga. Nostrum onsequatur, nesciunt rerum, reprehenderit, possimus libero maiores officii.</p>
+                                        <a href="http://www.redsuri.com/">Más...</a>
+                                    </div> 
+                                </div> 
+
+                                <div class="ui-block-c"> 
+                                    <div data-role="collapsible">
+                                        <h1>Basuras</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem necessitatibus dolor fuga. Nostrum onsequatur.</p>
+                                        <a href="http://www.redsuri.com/">Más...</a>
+                                    </div> 
+                                </div>   
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-b ui-responsive">					
+                        <div class="ui-block">
+                            <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                                <label for="select-choice-a" class="select ui-select">Seleccionar ROL</label>
+                                <div class="ui-select">									
+                                    <select name="rol" id="rol" data-native-menu="true" tabindex="0"  onchange="utils.updateRedenderCartelera(this);">
+                                        <option>Seleccione...</option>					
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>			
+
+            </div>
+            <div data-position="fixed" data-role="footer" class="ui-footer" data-theme="c">
+                <h4>2015 © SURI. Todos los derechos reservados.| Hecho en Colombia | Privacy Policy | Terms of Service</h4>
+            </div>			
+        </div>
+        <!--PAGINA INICIO-->
+        <!--pagina perfil menu-->
+        <div data-role="page" id="perfil"  data-theme="a">
+
+            <div class="ui-panel-wrapper">
+
+                <div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+                    <a href="#menu-suri" class="ui-btn ui-icon-grid ui-btn-icon-left ui-corner-all ui-shadow">MENU</a>
+                    <h1 class="ui-title" role="heading" aria-level="1">SURI</h1>	
+                    <a href="#usuario-suri" class="ui-btn ui-icon-gear ui-btn-icon-right ui-corner-all ui-shadow">!</a>	  
+                </div>
+
+                <div data-role="content">
+                    <div role="main" data-role="ui-content">	    	
+                        <div class="ui-grid-solo ui-responsive">
+                            <div class="ui-block">
+                                <h2>PERFIL</h2>
+                            </div>
+                        </div>
+                        <div class="ui-grid-solo ui-responsive">
+                            <div data-role="collapsible">
+                                <h1>Mi Foto</h1>
+                                <img src="images/users/person.svg" alt="" id="imagen_perfil" style="width: 100%;" >
+                            </div>						
+                        </div>
+                        <div class="ui-grid-solo ui-responsive">
+                            <div class="ui-block">					
+                                <div class="ui-body ui-body-a ui-corner-all">						
+                                    <div class="ui-grid-b ui-responsive">							
+                                        <div class="ui-block-a">
+                                            <h5>Nombre: </h5><h4 id="nombre_perfil">Jonathan</h4>	
+                                        </div>
+                                        <div class="ui-block-b">
+                                            <h5>Apellidos: </h5><h4 id="apellidos_perfil">Gallego Londoño</h4>	
+                                        </div>
+                                        <div class="ui-block-c">
+                                            <h5>Fecha Nacimiento: </h5>	<h4 id="fecha_nacimiento_perfil">02/02/1996</h4>
+                                        </div>									
+                                        <div class="ui-block-a">
+                                            <h5>Profesión: </h5><h4 id="profesion_perfil">Productor en Multimedia</h4>	
+                                        </div>
+                                        <div class="ui-block-b">
+                                            <h5>Email: </h5><h4 id="email1_perfil">Jonathan962_@misena.edu.co</h4>	
+                                        </div>
+                                        <div class="ui-block-c">
+                                            <h5>Teléfono: </h5><h4 id="telefono_perfil">4885770</h4>
+                                        </div>
+                                        <div class="ui-block-a">
+                                            <h5>Movil: </h5>	<h4 id="movil_perfil">3214623228</h4>
+                                        </div>
+                                        <div class="ui-block-b">
+                                            <h5>Dirección: </h5><h4 id="direccion_perfil">Carrera 46 # 52-77</h4>	
+                                        </div>
+                                        <div class="ui-block-c">
+                                            <h5>Ciudad Residencia: </h5><h4 id="ciudad_perfil">02/02/1996</h4>	
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block">
+                                <a class="ui-btn" href="#editar-perfil">EDITAR</a>
+                            </div>
+                        </div>
+                    </div>    	
+                </div>    
+
+
+            </div>
+            <div data-position="fixed" data-role="footer" class="ui-footer" data-theme="a">
+                <h4>2015 © SURI. Todos los derechos reservados.| Hecho en Colombia | Privacy Policy | Terms of Service</h4>
+            </div>
+        </div>
+        <!--pagina final perfil-->
+        <!--INICIO EDITAR PERFIL-->
+        <div data-role="page" id="editar-perfil"  data-theme="a">
+
+        </div>
+        <!--FIN EDITAR PERFIL-->
+        <!--INICIO CAMBIAR CONTRASENA-->
+        <div data-role="page" id="cambiar-contrasena"  data-theme="a">
+
+        </div>
+        <!--FIN CAMBIAR CONTRASENA-->
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script   type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script  type="text/javascript"  src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/utils.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+        <script type="text/javascript">
+                                        $(function () {
+                                            $("body>[data-role='panel']").panel();
+                                        });
+        </script>
+    </body>
+</html>
